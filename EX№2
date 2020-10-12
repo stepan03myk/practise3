@@ -1,0 +1,24 @@
+a = '' #вводити_по_одному_слову
+word_list = []
+while True:
+    a = str(input('Enter any words (do not print anything if you want to stop)'))
+    if a == '':
+        break
+    else:
+        word_list.append(a)
+length = len(word_list)
+if length == 1:
+        print(str(word_list[0]))
+elif length == 2:
+        print(str(word_list[0]) + 'and' + str(word_list[1]))
+else:
+    word_list.insert(-1,' ' +  'and'+' ')
+    for i in range(0, length+1):
+            if i == length-1 or i == length:
+                print(word_list[i], end='')
+            else:
+                print(str(word_list[i] + ','), end='')
+print()
+
+Stepan Mykytchuk, [12 жовт. 2020 р., 18:06:20]:
+products_list = [29.25, 48.99, 99.98, 124.65, 214.30, 5...
